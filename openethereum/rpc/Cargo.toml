@@ -1,0 +1,85 @@
+[package]
+description = "OpenEthereum JSON-RPC Servers (WS, HTTP, IPC)"
+name = "parity-rpc"
+version = "1.12.0"
+license = "GPL-3.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+
+[lib]
+
+[dependencies]
+ansi_term = "0.11"
+futures = "0.1.6"
+log = "0.4"
+order-stat = "0.1"
+rand = "0.7.3"
+rand_xorshift = "0.2.0"
+rustc-hex = "2.1.0"
+semver = "0.9"
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+parking_lot = "0.10.0"
+tempfile = "3.1"
+tiny-keccak = "2.0.2"
+tokio-timer = "0.2.13"
+transient-hashmap = "0.4"
+itertools = "0.8.2"
+
+jsonrpc-core = "14.0.5"
+jsonrpc-derive = "14.0.5"
+jsonrpc-http-server = "14.0.5"
+jsonrpc-ws-server = "14.0.5"
+jsonrpc-ipc-server = "14.0.6"
+jsonrpc-pubsub = "14.0.5"
+
+client-traits = { path = "../ethcore/client-traits" }
+common-types = { path = "../ethcore/types" }
+engine = { path = "../ethcore/engine" }
+ethash = { path = "../ethash" }
+ethcore = { path = "../ethcore" }
+ethcore-accounts = { path = "../accounts", optional = true }
+ethcore-light = { path = "../ethcore/light" }
+ethcore-logger = { path = "../parity/logger" }
+ethcore-miner = { path = "../miner" }
+ethcore-network = { path = "../util/network" }
+ethcore-private-tx = { path = "../ethcore/private-tx" }
+ethcore-sync = { path = "../ethcore/sync" }
+ethereum-types = "0.9.0"
+fastmap = { path = "../util/fastmap" }
+machine = { path = "../ethcore/machine" }
+parity-bytes = "0.1"
+parity-crypto = { version = "0.6.1", features = ["publickey"] }
+
+eip-712 = { path = "../util/EIP-712" }
+ethjson = { path = "../json" }
+ethkey = { path = "../accounts/ethkey" }
+ethstore = { path = "../accounts/ethstore" }
+fetch = { path = "../util/fetch" }
+keccak-hash = "0.5.0"
+parity-runtime = { version = "0.1.1", features = ["test-helpers"] }
+parity-updater = { path = "../updater" }
+parity-version = { path = "../util/version" }
+rlp = "0.4.5"
+account-state = { path = "../ethcore/account-state" }
+snapshot = { path = "../ethcore/snapshot" }
+stats = { path = "../util/stats" }
+trace = { path = "../ethcore/trace" }
+vm = { path = "../ethcore/vm" }
+
+[dev-dependencies]
+client-traits = { path = "../ethcore/client-traits" }
+ethcore = { path = "../ethcore", features = ["test-helpers"] }
+ethcore-accounts = { path = "../accounts" }
+ethcore-io = { path = "../util/io" }
+ethcore-network = { path = "../util/network" }
+ethjson = { path = "../json", features = ["test-helpers"] }
+fake-fetch = { path = "../util/fake-fetch" }
+maplit = "1.0.2"
+spec = { path = "../ethcore/spec" }
+pretty_assertions = "0.1"
+transaction-pool = "2.0.1"
+verification = { path = "../ethcore/verification" }
+
+[features]
+accounts = ["ethcore-accounts"]

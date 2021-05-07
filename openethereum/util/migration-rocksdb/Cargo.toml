@@ -1,0 +1,15 @@
+[package]
+name = "migration-rocksdb"
+version = "0.1.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+edition = "2018"
+license = "GPL-3.0"
+
+[dependencies]
+log = "0.4"
+kvdb = "0.5.0"
+kvdb-rocksdb = "0.7.0"
+
+[dev-dependencies]
+tempfile = "3.1"
+maplit = "1.0.2"

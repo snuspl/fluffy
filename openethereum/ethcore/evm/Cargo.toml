@@ -1,0 +1,32 @@
+[package]
+description = "OpenEthereum Virtual Machine (EVM) Rust Implementation"
+name = "evm"
+version = "0.1.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+
+[dependencies]
+bit-set = "0.4"
+parity-bytes = "0.1"
+ethereum-types = "0.9.0"
+parity-util-mem = "0.6.0"
+lazy_static = "1.0"
+log = "0.4"
+vm = { path = "../vm" }
+keccak-hash = "0.5.0"
+parking_lot = "0.10.0"
+memory-cache = { path = "../../util/memory-cache" }
+
+strum = "0.18.0"
+strum_macros = "0.18.0"
+
+[dev-dependencies]
+criterion = "0.3"
+hex-literal = "0.2.1"
+
+[features]
+evm-debug = []
+evm-debug-tests = ["evm-debug"]
+
+[[bench]]
+name = "basic"
+harness = false

@@ -1,0 +1,35 @@
+# NOTE This file is used by the auto-updater service.
+# Make sure to update the service if it's moved or the structure is changed.
+[package]
+name = "parity-version"
+# NOTE: this value is used for the OpenEthereum version string (via env CARGO_PKG_VERSION)
+version = "3.0.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+build = "build.rs"
+
+[package.metadata]
+# This versions track. Should be changed to `stable` when on respective branches.
+# Used by auto-updater and for the OpenEthereum version string.
+track = "stable"
+
+# Network specific settings, used ONLY by auto-updater.
+# Latest supported fork blocks.
+# Indicates a critical release in this track (i.e. consensus issue).
+[package.metadata.networks]
+foundation = { forkBlock = 9069000, critical = false }
+ropsten = { forkBlock = 6485846, critical = false }
+kovan = { forkBlock = 14111141, critical = false }
+goerli = { forkBlock = 1561651, critical = false }
+
+[dependencies]
+parity-bytes = "0.1"
+rlp = "0.4.5"
+target_info = "0.1"
+
+[build-dependencies]
+vergen = "3.0.4"
+rustc_version = "0.2"
+toml = "0.5.6"
+
+[features]
+final = []

@@ -1,0 +1,57 @@
+syntax="proto2";
+
+message Fuzzed {
+  repeated string builtin_addrs = 1; 
+
+  required EOA genesis_account = 2; 
+  repeated Block blocks = 3; 
+
+  required bool is_debug_mode = 4;
+}
+
+message Block {
+  required uint64 number = 1;
+  required string author = 2;
+  required uint64 timestamp = 3;
+  required uint64 difficulty = 4;
+  required uint64 gas_limit = 5;
+
+  repeated Transaction transactions = 6;
+}
+
+message Transaction {
+  required string sender = 1;
+
+  optional uint32 receiver = 2;
+
+  optional string receiver_debug = 3; 
+
+  required uint64 gas_price = 4;
+  required uint64 gas = 5;
+  required uint64 value = 6;
+
+
+  required bool is_create_tx = 10;
+
+  optional bytes call_tx_data = 11;
+
+  optional bytes create_tx_constructor = 12;
+  optional bytes create_tx_contract = 13;
+
+  optional bytes create_tx_constructor_postfix = 14;
+  optional bytes create_tx_contract_postfix = 15;
+
+  optional string tx_data_hex_debug = 16;
+}
+
+message EOA {
+  required string address = 1;
+  required uint64 balance = 2;
+  required uint64 nonce = 3;
+}
+
+message FuzzResult {
+    repeated string roots = 1;
+    repeated string dumps = 2;
+    repeated string traces = 3;
+}

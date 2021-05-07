@@ -1,0 +1,4 @@
+fuzz_logs
+*.idea
+.DS_Store
+corpus

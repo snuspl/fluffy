@@ -1,0 +1,15 @@
+[package]
+name = "evmbindebug"
+description = "Parity's EVM implementation"
+version = "0.1.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+
+[[bin]]
+name = "evmbindebug"
+path = "./src/main.rs"
+
+[dependencies]
+evmfuzz = { path = "../evmfuzz" }
+
+# FUZZ FUZZ
+protobuf = "2.14.0"
