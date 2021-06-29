@@ -27,5 +27,4 @@ Create an issue for questions and bug reports.
 We welcome your contributions to Fluffy! We aim to create an open-source project that is contributed by the open-source community. For general discussions about development, please refer to the issues.
 
 # License
-Apache license
-
+[Apache-2.0 License](https://github.com/snuspl/fluffy/blob/main/LICENSE)
