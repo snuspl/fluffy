@@ -24,7 +24,7 @@ Youngseok Yang, Taesoo Kim, Byung-Gon Chun. Finding Consensus Bugs in Ethereum v
 Create an issue for questions and bug reports.
 
 # Contribution
-We welcome your contributions to Nimble! We aim to create an open-source project that is contributed by the open-source community. For general discussions about development, please refer to the issues.
+We welcome your contributions to Fluffy! We aim to create an open-source project that is contributed by the open-source community. For general discussions about development, please refer to the issues.
 
 # License
 Apache license
