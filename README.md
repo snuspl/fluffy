@@ -6,16 +6,16 @@ Fluffy found two new consensus bugs in the most popular Geth Ethereum client whi
 * Code coverage and throughput
 ![스크린샷, 2021-06-29 14-19-31](https://user-images.githubusercontent.com/4114572/123741463-0e106d00-d8e5-11eb-94d5-722e38c9030f.png)
 
-# How to install and run
+# Version
 
 This version of Fluffy tests OpenEthereum v3.0.0 and Geth v1.9.14.
 
-# How to install and run
+# Quickstart
 
 ```bash
-cd openethereum/evmfuzz/fuzz/
-cargo fuzz run fuzz_target_1
+sudo docker build -t fuzzer .
 ```
+
 # Publication
 
 Youngseok Yang, Taesoo Kim, Byung-Gon Chun. Finding Consensus Bugs in Ethereum via Multi-transaction Differential Fuzzing. OSDI 2021.
