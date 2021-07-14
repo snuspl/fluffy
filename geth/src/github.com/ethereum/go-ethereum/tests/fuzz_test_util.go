@@ -121,7 +121,7 @@ func RunFuzz(fuzzed Fuzzed) FuzzResult {
 			} else {
 				vmConfig = vm.Config{
 					Tracer: nil,
-					Debug:  false, /
+					Debug:  false,
 				}
 			}
 
@@ -129,7 +129,7 @@ func RunFuzz(fuzzed Fuzzed) FuzzResult {
 			context := vm.Context{
 				CanTransfer: core.CanTransfer,
 				Transfer:    core.Transfer,
-				GetHash:     fuzzBlockHash, /
+				GetHash:     fuzzBlockHash,
 				Origin:      common.HexToAddress(transaction.GetSender()),
 				Coinbase:    common.HexToAddress(block.GetAuthor()),
 				BlockNumber: new(big.Int).SetUint64(block.GetNumber()),
