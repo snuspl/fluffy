@@ -22,6 +22,9 @@ This version of Fluffy tests OpenEthereum v3.0.0 and Geth v1.9.14.
 sudo docker build -t fuzzer .
 ```
 
+This command will install Rust and Go language dependencies(e.g., Cargo, a Go binary release), install several custom dependencies of Fluffy (e.g., custom libfuzzer), and finally install and run Fluffy.
+Please refer to the Dockerfile for details.
+
 # Publication
 
 Youngseok Yang, Taesoo Kim, Byung-Gon Chun. [Finding Consensus Bugs in Ethereum via Multi-transaction Differential Fuzzing](https://www.usenix.org/system/files/osdi21-yang.pdf). OSDI 2021.
