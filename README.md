@@ -22,7 +22,7 @@ sudo docker build -t fuzzer .
 
 # Publication
 
-Youngseok Yang, Taesoo Kim, Byung-Gon Chun. Finding Consensus Bugs in Ethereum via Multi-transaction Differential Fuzzing. OSDI 2021.
+Youngseok Yang, Taesoo Kim, Byung-Gon Chun. [Finding Consensus Bugs in Ethereum via Multi-transaction Differential Fuzzing](https://www.usenix.org/system/files/osdi21-yang.pdf). OSDI 2021.
 
 # Troubleshooting
 Create an issue for questions and bug reports.
