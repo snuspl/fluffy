@@ -9,6 +9,12 @@ authors = [
 	"Parity Technologies <admin@parity.io>"
 ]
 
+
+[patch.crates-io]
+syn = { git = "https://github.com/johnyangk/syn", branch = "fix", optional = true }
+#ethabi-derive = "14.1"
+
+
 [dependencies]
 ansi_term = "0.11"
 atty = "0.2.8"
